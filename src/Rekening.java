@@ -9,12 +9,22 @@ public abstract class Rekening {
         this.saldo = saldo;
     }
 
-    public String getNomor() { return nomor; }
-    public String getPemilik() { return pemilik; }
-    public int getSaldo() { return saldo; }
+    public String getNomor() {
+        return nomor;
+    }
+
+    public String getPemilik() {
+        return pemilik;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
 
     public boolean setor(int jumlah) {
-        if (jumlah <= 0) return false;
+        if (jumlah <= 0) {
+            return false;
+        }
         saldo += jumlah;
         return true;
     }
@@ -26,6 +36,7 @@ public abstract class Rekening {
     }
 
     public abstract int biayaAdminBulanan();
+
     public abstract String keterangan();
 
     protected static String formatRupiah(int angka) {
